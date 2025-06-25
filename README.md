@@ -29,19 +29,20 @@ This is the frontend for the Expense Tracker application, built using **React.js
 ## 🔧 Project Structure
 
 src/
-├── api.js # Axios instance & API methods
-├── App.jsx # Routing logic
-├── main.jsx # Entry point
+├── api.js                # Axios instance & API methods
+├── App.jsx               # Routing logic
+├── main.jsx              # React entry point
 ├── context/
-│ └── AuthContext.jsx # Auth provider & hook
+│   └── AuthContext.jsx   # Auth provider & hook
 ├── components/
-│ ├── ExpenseForm.jsx
-│ ├── ExpenseList.jsx
-│ └── ExpenseChart.jsx
+│   ├── ExpenseForm.jsx   # Form to add/edit expenses
+│   ├── ExpenseList.jsx   # Displays list of expenses
+│   └── ExpenseChart.jsx  # Expense pie/bar chart
 └── pages/
-├── LoginPage.jsx
-├── RegisterPage.jsx
-└── Dashboard.jsx
+    ├── LoginPage.jsx     # Login screen
+    ├── RegisterPage.jsx  # Registration screen
+    └── Dashboard.jsx     # Main dashboard after login
+
 
 
 ---

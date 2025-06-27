@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 💰 Expense Tracker Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for the Expense Tracker application, built using **React.js**, **Tailwind CSS**, and **Recharts**. It interacts with a Node.js + MongoDB backend to allow users to track their expenses visually and intuitively.
 
-## Available Scripts
+---
+<img width="1241" alt="Screenshot 2025-06-27 at 7 45 30 PM" src="https://github.com/user-attachments/assets/5f9b4f71-f737-4668-8513-f21586be1f3b" />
+<img width="1223" alt="Screenshot 2025-06-27 at 7 45 44 PM" src="https://github.com/user-attachments/assets/ad2009aa-e9ec-41d4-840b-fc7bc8407ecb" />
+<img width="1271" alt="Screenshot 2025-06-27 at 7 46 18 PM" src="https://github.com/user-attachments/assets/9aa0536f-8e7a-42cf-88fc-1a8b6207c7b6" />
+<img width="1265" alt="Screenshot 2025-06-27 at 7 47 45 PM" src="https://github.com/user-attachments/assets/acfedc8a-a18b-4071-9d57-5fe1115ffe23" />
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+- 🔐 JWT-based authentication (Login / Register)
+- 💼 Add, edit, delete expenses
+- 📊 Interactive charts (Recharts)
+- 🔄 Real-time feedback via toast notifications
+- 📱 Fully responsive design
+- 📦 React Context for global auth state
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React 18+
+- React Router DOM
+- Tailwind CSS
+- React Toastify
+- Recharts
+- Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 Project Structure
 
-### `npm run eject`
+src/
+├── api.js                # Axios instance & API methods
+├── App.jsx               # Routing logic
+├── main.jsx              # React entry point
+├── context/
+│   └── AuthContext.jsx   # Auth provider & hook
+├── components/
+│   ├── ExpenseForm.jsx   # Form to add/edit expenses
+│   ├── ExpenseList.jsx   # Displays list of expenses
+│   └── ExpenseChart.jsx  # Expense pie/bar chart
+└── pages/
+    ├── LoginPage.jsx     # Login screen
+    ├── RegisterPage.jsx  # Registration screen
+    └── Dashboard.jsx     # Main dashboard after login
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧪 Setup Instructions
 
-## Learn More
+### Prerequisites
+- Node.js and npm installed
+- Backend running at `http://localhost:5050`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Clone the repo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/snehalsuman/Expense-Track-Frontend.git
+cd expense-tracker-frontend
+npm install
+```
+### 2. Environment variables
+```bash
+Create a .env file:
+VITE_BACKEND_URL=http://localhost:5050
+```
+### 3. Start the app
+```bash
+npm start
+```
+Visit: http://localhost:5173

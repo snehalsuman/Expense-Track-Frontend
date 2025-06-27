@@ -6,7 +6,8 @@ This is the frontend for the Expense Tracker application, built using **React.js
 <img width="1241" alt="Screenshot 2025-06-27 at 7 45 30 PM" src="https://github.com/user-attachments/assets/5f9b4f71-f737-4668-8513-f21586be1f3b" />
 <img width="1223" alt="Screenshot 2025-06-27 at 7 45 44 PM" src="https://github.com/user-attachments/assets/ad2009aa-e9ec-41d4-840b-fc7bc8407ecb" />
 <img width="1271" alt="Screenshot 2025-06-27 at 7 46 18 PM" src="https://github.com/user-attachments/assets/9aa0536f-8e7a-42cf-88fc-1a8b6207c7b6" />
-![Uploading Screenshot 2025-06-27 at 7.46.48 PM.png…]()
+<img width="1265" alt="Screenshot 2025-06-27 at 7 47 45 PM" src="https://github.com/user-attachments/assets/acfedc8a-a18b-4071-9d57-5fe1115ffe23" />
+
 
 
 

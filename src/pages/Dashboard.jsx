@@ -6,6 +6,8 @@ import ExpenseList from '../components/ExpenseList';
 import ExpenseChart from '../components/ExpenseChart';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+// Add Heroicons for dashboard icons
+import { ArrowRightOnRectangleIcon, CurrencyDollarIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
 
 const Dashboard = () => {
   const [expenses, setExpenses] = useState([]);
@@ -57,34 +59,70 @@ const Dashboard = () => {
     navigate('/login');
   };
 
+  // Calculate summary data
+  const totalExpenses = expenses.reduce((sum, exp) => sum + Number(exp.amount || 0), 0);
+  const uniqueCategories = [...new Set(expenses.map(exp => exp.category))];
+
   return (
-  <div className="min-h-screen bg-gray-50 px-4 py-6 flex items-center justify-center">
-    <div className="w-full max-w-4xl">
-      <div className="flex flex-col sm:flex-row sm:justify-between items-center text-center sm:text-left mb-6">
-        <div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-blue-700 mb-2">
-            Expense Tracker Dashboard
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-700">
-            Welcome <span className="font-semibold text-black">{user?.username || '👤'}</span> 👋
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 px-4 py-8 flex items-center justify-center">
+      <div className="w-full max-w-5xl">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:justify-between items-center text-center sm:text-left mb-8">
+          <div>
+            <h1 className="text-4xl font-extrabold text-blue-700 mb-2 tracking-tight drop-shadow">
+              Dashboard
+            </h1>
+            <p className="text-lg text-blue-500">
+              {user?.username ? (
+                <>
+                  Hello, <span className="font-semibold text-black">{user.username}</span>. Here is your expense overview.
+                </>
+              ) : (
+                <>Welcome. Here is your expense overview.</>
+              )}
+            </p>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="mt-4 sm:mt-0 flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-semibold shadow transition"
+          >
+            <ArrowRightOnRectangleIcon className="h-5 w-5" /> Logout
+          </button>
         </div>
-        <button
-          onClick={handleLogout}
-          className="mt-4 sm:mt-0 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
-        >
-          Logout
-        </button>
+
+        {/* Summary Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white rounded-xl shadow-lg p-6 flex items-center gap-4 border-l-4 border-blue-400">
+            <CurrencyDollarIcon className="h-10 w-10 text-blue-400" />
+            <div>
+              <div className="text-2xl font-bold text-blue-700">₹{totalExpenses.toLocaleString()}</div>
+              <div className="text-gray-500">Total Expenses</div>
+            </div>
+          </div>
+          <div className="bg-white rounded-xl shadow-lg p-6 flex items-center gap-4 border-l-4 border-purple-400">
+            <Squares2X2Icon className="h-10 w-10 text-purple-400" />
+            <div>
+              <div className="text-2xl font-bold text-purple-700">{uniqueCategories.length}</div>
+              <div className="text-gray-500">Categories</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8 md:mb-0 border border-blue-100">
+            <ExpenseForm onSubmit={handleAddOrUpdate} editingExpense={editingExpense} />
+          </div>
+          <div className="bg-white rounded-xl shadow-lg p-6 border border-purple-100">
+            <ExpenseChart expenses={expenses} />
+          </div>
+        </div>
+        <div className="mt-8 bg-white rounded-xl shadow-lg p-6 border border-blue-100">
+          <ExpenseList expenses={expenses} onEdit={setEditingExpense} onDelete={handleDelete} />
+        </div>
       </div>
-
-      <ExpenseForm onSubmit={handleAddOrUpdate} editingExpense={editingExpense} />
-      <ExpenseList expenses={expenses} onEdit={setEditingExpense} onDelete={handleDelete} />
-      <ExpenseChart expenses={expenses} />
     </div>
-  </div>
-);
-
-
+  );
 };
 
 export default Dashboard;

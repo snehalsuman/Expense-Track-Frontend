@@ -3,13 +3,11 @@
 This is the frontend for the Expense Tracker application, built using **React.js**, **Tailwind CSS**, and **Recharts**. It interacts with a Node.js + MongoDB backend to allow users to track their expenses visually and intuitively.
 
 ---
-<img width="1252" alt="Screenshot 2025-06-25 at 10 53 26 PM" src="https://github.com/user-attachments/assets/4e171f9c-d60e-42d8-9136-efa1a60d47a6" />
+<img width="1241" alt="Screenshot 2025-06-27 at 7 45 30 PM" src="https://github.com/user-attachments/assets/5f9b4f71-f737-4668-8513-f21586be1f3b" />
+<img width="1223" alt="Screenshot 2025-06-27 at 7 45 44 PM" src="https://github.com/user-attachments/assets/ad2009aa-e9ec-41d4-840b-fc7bc8407ecb" />
+<img width="1271" alt="Screenshot 2025-06-27 at 7 46 18 PM" src="https://github.com/user-attachments/assets/9aa0536f-8e7a-42cf-88fc-1a8b6207c7b6" />
+![Uploading Screenshot 2025-06-27 at 7.46.48 PM.png…]()
 
-<img width="1246" alt="Screenshot 2025-06-25 at 10 53 38 PM" src="https://github.com/user-attachments/assets/e0e21311-d457-42e9-87e3-c73ea0c6855c" />
-
-<img width="1223" alt="Screenshot 2025-06-25 at 10 54 10 PM" src="https://github.com/user-attachments/assets/a7a54562-e38f-4841-bc51-29f4ac089300" />
-
-<img width="1212" alt="Screenshot 2025-06-25 at 10 54 44 PM" src="https://github.com/user-attachments/assets/3b504e3a-e2ab-4008-94a1-9ac6215092d2" />
 
 
 ## 🚀 Features
